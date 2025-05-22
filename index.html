@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utility Tools Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button class="tab" data-tool="todo">📋 To-Do</button>
+      <button class="tab" data-tool="notes">🗒️ Notes</button>
+      <button class="tab" data-tool="age">📅 Age</button>
+      <button class="tab" data-tool="convert">🔗 Convert</button>
+      <button class="tab" data-tool="password">🔐 Password</button>
+      <button id="toggle-theme">🌃 Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-wrapper">
+      <section id="todo" class="tool">
+        <h2>📋 To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a task..." />
+        <button onclick="addTodo()">Add</button>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <section id="notes" class="tool">
+        <h2>🗒️ Notes</h2>
+        <textarea id="notes-area" placeholder="Type your notes..."></textarea>
+        <button onclick="saveNote()">Save Note</button>
+        <div id="saved-note" class="note-display"></div>
+      </section>
+
+      <section id="age" class="tool">
+        <h2>📅 Age Calculator</h2>
+        <input type="date" id="birth-date" />
+        <button onclick="calculateAge()">Calculate Age</button>
+        <div id="age-result"></div>
+        <div id="prev-age"></div>
+      </section>
+
+      <section id="convert" class="tool">
+        <h2>🔗 Unit Converter</h2>
+        <select id="convert-type">
+          <option value="cm-to-inch">CM to Inches</option>
+          <option value="inch-to-cm">Inches to CM</option>
+          <option value="kg-to-lb">KG to Pounds</option>
+          <option value="lb-to-kg">Pounds to KG</option>
+        </select>
+        <input type="number" id="convert-value" placeholder="Enter value" />
+        <button onclick="convertUnit()">Convert</button>
+        <div id="convert-result"></div>
+      </section>
+
+      <section id="password" class="tool">
+        <h2>🔐 Password Generator</h2>
+        <input type="number" id="pwd-length" placeholder="Enter length" />
+        <button onclick="generatePassword()">Generate</button>
+        <div id="pwd-result"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made To Calculations | ©  2025 Utility Tools Hub</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
